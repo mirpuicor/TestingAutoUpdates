@@ -1,6 +1,6 @@
 {
     "name": "lescovex",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "Lescovex media explorer and wallet",
     "main": "main.js",
     "author": "Lescovex",
@@ -116,9 +116,9 @@
             "target": "nsis",
             "publish": {
                 "provider": "github",
-                "repo": "TestingAutoUpdates",
+                "vPrefixedTagName": "true",
                 "owner": "mirpuicor",
-                "releaseType": "release"
+                "publishAutoUpdate": "true"
             }
         },
         "linux": {

@@ -96,6 +96,7 @@ app.on('activate', () => {
     }
 })
 
+/*
 
 function sendStatusToWindow(text) {
     let title = win.getTitle();
@@ -116,6 +117,8 @@ autoUpdater.on('update-available', (ev, info) => {
     sendStatusToWindow('Update available.');
 });
 autoUpdater.on('update-not-available', (ev, info) => {
+    console.log("ev?", ev);
+    console.log("info?", info);
     sendStatusToWindow('Update not available.');
 });
 autoUpdater.on('error', (ev, err) => {
@@ -135,6 +138,6 @@ autoUpdater.on('update-downloaded', (ev, info) => {
     }, 5000)
 });
 autoUpdater.checkForUpdates();
-
+*/
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
