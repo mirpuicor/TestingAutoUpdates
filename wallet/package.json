@@ -9,6 +9,7 @@
         "type": "git",
         "url": "https://github.com/mirpuicor/TestingAutoUpdates.git"
     },
+
     "scripts": {
         "start": "webpack-dev-server --inline --progress --port 8080",
         "build": "rimraf build && webpack --config webpack.config.js --progress --profile --bail",
@@ -110,7 +111,12 @@
         "win": {
             "icon": "./lescovex.ico",
             "target": "nsis",
-            "publish": ["github"]
+            "publish": {
+                "provider": "github",
+                "repo": "TestingAutoUpdates",
+                "owner": "mirpuicor",
+                "releaseType": "release"
+            }
         },
         "linux": {
             "target": "AppImage",
