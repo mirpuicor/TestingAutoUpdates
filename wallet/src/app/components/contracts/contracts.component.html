@@ -1,0 +1,38 @@
+<nav class="flex-row">
+    <a routerLink="contract-page" [class.disabled]="_contractStorage.LSCX_Contracts.length == 0 && _contractStorage.customContracts.length == 0" routerLinkActive="active" #contract="routerLinkActive">
+        <div>
+            <span>
+                <img class="top-nav-img" *ngIf="contract.isActive" src='~icons/send_icon.svg'>
+                 <img class="top-nav-img" *ngIf="!contract.isActive" src='~icons/send_inactive_icon.svg'>
+            </span>
+            <p class="title-button-navbar">Contracts</p>
+        </div>
+    </a>
+
+    <a routerLink="history" [class.disabled]="!selected" routerLinkActive="active" #hist="routerLinkActive">
+        <div>
+            <span>
+                <img class="top-nav-img" *ngIf="hist.isActive" src='~icons/history_icon.svg'>
+                <img class="top-nav-img" *ngIf="!hist.isActive" src='~icons/history_inactive_icon.svg'>
+            </span>
+            <p class="title-button-navbar">Contract history</p>
+        </div>
+    </a>
+
+    <a routerLink="add" routerLinkActive="active" #add="routerLinkActive">
+        <div>
+            <span>
+                <img class="top-nav-img" *ngIf="add.isActive" src='~icons/newcontract_icon.svg'>
+                <img class="top-nav-img" *ngIf="!add.isActive" src='~icons/newcontract_inactive_icon.svg'>
+            </span>
+            <p class="title-button-navbar">Add</p>
+        </div>
+    </a>
+    
+</nav>
+<div class="content scrollable-content flex-inside" [ngStyle]="{'max-height.px': maxHeight()}" id="contract" >
+    <p *ngIf="!_account.account.hasOwnProperty('address'); else content" class="text-center">Select an account</p>
+    <ng-template #content>
+        <router-outlet></router-outlet>
+    </ng-template>
+</div>

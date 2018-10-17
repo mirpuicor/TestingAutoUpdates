@@ -1,0 +1,6 @@
+<div *ngIf="_LSCXcontract.contractHist?.length == 0 && _customContract.contractHist?.length == 0">
+    <p class="whiteBox text-center">There are not contract selected</p>
+</div>
+  
+<app-list *ngIf="_LSCXcontract.contractHist?.length > 0" [history]="_LSCXcontract.contractHist" [address]="_LSCXcontract.contractInfo.address"></app-list>
+<app-list *ngIf="_customContract.contractHist?.length > 0" [history]="_customContract.contractHist" [address]="_customContract.contractInfo.address"></app-list>

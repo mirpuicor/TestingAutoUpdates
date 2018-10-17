@@ -1,0 +1,46 @@
+<div>
+    <h1 class="text-center">Confirm transaction <img class="right" src="~icons/cross_icon.svg" (click)="closeDialog()"></h1>
+</div>
+<div class="margin">
+    <div *ngIf="data.action != 'contractDeploy'" class="dist">
+        <p class="black">To</p>
+        <p>{{data.to}}</p>
+    </div>
+
+    <h2 *ngIf="data.action == 'contractDeploy'" class="black dist">Contract creation</h2>
+
+    <div class="flex-row dist">
+        <div class="flex1">
+            <p class="black">Amount</p>
+            <p *ngIf="data.action != 'transfer'">ETH {{(data.amount| converter:'fromWei':'ether') | number:'1.2-8':'en'}}</p>
+            <p *ngIf="data.action == 'transfer'">{{data.token}} {{data.tokenAmount}}</p>
+        </div>
+        <div class="flex1">
+            <p class="black">Fees</p>
+            <p>ETH {{(data.fees | converter:'fromWei':'ether') | number:'1.2-8':'en'}}</p>
+        </div>
+        <div class="flex1">
+            <p class="black">Total</p>
+            <p>ETH {{(data.total | converter:'fromWei':'ether') | number:'1.2-8':'en'}}</p>
+        </div>
+    </div>
+</div>
+<div *ngIf="insufficient" class="dist">
+    <p class="error-founds input text-center dist">You don't have enough funds</p>
+    <div class="buttons text-center">
+        <button class="btn-black half" (click)="closeDialog()">Back</button>
+    </div>
+</div>
+<div *ngIf="!insufficient">
+    <div class="dist">
+        <label class="title block">Password*</label>
+        <input class="half" type="password" required id="pass" name="pass" [(ngModel)]="pass" />
+        <p class="italic">Type your account password to continue.</p>
+    </div>
+    <div class="buttons">
+        <button class="btn-black half left" (click)="closeDialog()">Cancel</button>
+        <button *ngIf="data.action == 'withdraw'" class="btn-inverse half right" (click)="sendTx(pass)">Withdraw</button>
+        <button *ngIf="data.action == 'contractDeploy'" class="btn-inverse half right" (click)="sendTx(pass)">Deploy</button>
+        <button *ngIf="data.action != 'contractDeploy' && data.action != 'withdraw'" class="btn-inverse half right" (click)="sendTx(pass)">Send</button>
+    </div>
+</div>
