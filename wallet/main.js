@@ -95,6 +95,13 @@ app.on('activate', () => {
         createWindow()
     }
 })
+
+
+function sendStatusToWindow(text) {
+    let title = win.getTitle();
+    win.setTitle(title + ": " + text);
+}
+
 autoUpdater.allowDowngrade = true;
 autoUpdater.setFeedURL({
     "provider": "github",
