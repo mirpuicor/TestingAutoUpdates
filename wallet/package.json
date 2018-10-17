@@ -20,6 +20,9 @@
         "dist": "electron-builder --publish always",
         "release": "build"
     },
+    "publish": {
+        "provider": "github"
+    },
     "dependencies": {
         "@angular/animations": "~4.2.0",
         "@angular/cdk": "2.0.0-beta.8",
@@ -115,7 +118,7 @@
                 "provider": "github",
                 "repo": "TestingAutoUpdates",
                 "owner": "mirpuicor",
-                "releaseType": "release"
+                "releaseType": "draft"
             }
         },
         "linux": {

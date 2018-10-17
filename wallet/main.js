@@ -107,7 +107,7 @@ autoUpdater.setFeedURL({
     "provider": "github",
     "owner": "mirpuicor",
     "repo": "TestingAutoUpdates",
-    "releaseType": "release"
+    "releaseType": "draft"
 });
 autoUpdater.on('checking-for-update', () => {
     sendStatusToWindow('Checking for update...');
