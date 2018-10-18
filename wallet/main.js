@@ -96,7 +96,7 @@ app.on('activate', () => {
     }
 })
 
-
+/*
 
 function sendStatusToWindow(text) {
     let title = win.getTitle();
@@ -133,6 +133,6 @@ autoUpdater.on('update-downloaded', (ev, info) => {
     }, 5000)
 });
 autoUpdater.checkForUpdates();
-
+*/
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
