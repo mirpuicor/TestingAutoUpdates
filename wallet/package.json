@@ -18,7 +18,7 @@
         "postinstall": "electron-builder install-app-deps",
         "dist": "electron-builder --publish always",
         "release": "build",
-        "publish": "build --win --mac --linux -p always"
+        "publish": "build --win -p always"
     },
     "publish": {
         "provider": "github"
