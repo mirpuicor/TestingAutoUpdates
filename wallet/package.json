@@ -124,14 +124,7 @@
         },
         "linux": {
             "target": "AppImage",
-            "icon": "./lescovex.png",
-            "publish": {
-                "provider": "github",
-                "owner": "mirpuicor",
-                "releaseType": "draft",
-                "publishAutoUpdate": "true",
-                "repo": "TestingAutoUpdates"
-            }
+            "icon": "./lescovex.png"
         },
         "nsis": {
             "oneClick": false,
