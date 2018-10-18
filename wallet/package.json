@@ -118,6 +118,7 @@
                 "provider": "github",
                 "vPrefixedTagName": "true",
                 "owner": "mirpuicor",
+                "releaseType": "release",
                 "publishAutoUpdate": "true"
             }
         },
