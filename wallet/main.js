@@ -111,13 +111,9 @@ autoUpdater.on('checking-for-update', () => {
     sendStatusToWindow('Checking for update...');
 });
 autoUpdater.on('update-available', (ev, info) => {
-    console.log("ev?", ev);
-    console.log("info?", info);
     sendStatusToWindow('Update available.');
 });
 autoUpdater.on('update-not-available', (ev, info) => {
-    console.log("ev?", ev);
-    console.log("info?", info);
     sendStatusToWindow('Update not available.');
 });
 autoUpdater.on('error', (ev, err) => {
