@@ -18,7 +18,7 @@
         "postinstall": "electron-builder install-app-deps",
         "dist": "electron-builder --publish always",
         "release": "build",
-        "publish": "build -p always"
+        "publish": "build --win --mac --linux -p always"
     },
     "publish": {
         "provider": "github"
@@ -113,8 +113,14 @@
         },
         "win": {
             "icon": "./lescovex.ico",
-            "target": "nsis"
-
+            "target": "nsis",
+            "publish": {
+                "provider": "github",
+                "owner": "mirpuicor",
+                "releaseType": "draft",
+                "publishAutoUpdate": "true",
+                "repo": "TestingAutoUpdates"
+            }
         },
         "linux": {
             "target": "AppImage",
@@ -126,13 +132,6 @@
             "allowElevation": true,
             "allowToChangeInstallationDirectory": true,
             "runAfterFinish": true
-        },
-        "publish": {
-            "provider": "github",
-            "owner": "mirpuicor",
-            "releaseType": "draft",
-            "publishAutoUpdate": "true",
-            "repo": "TestingAutoUpdates"
         },
         "files": [
             "build",
