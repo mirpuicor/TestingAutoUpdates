@@ -109,14 +109,7 @@
         "appId": "Lescovex",
         "mac": {
             "target": "dmg",
-            "icon": "./lescovex.png",
-            "publish": {
-                "provider": "github",
-                "owner": "mirpuicor",
-                "releaseType": "draft",
-                "publishAutoUpdate": "true",
-                "repo": "TestingAutoUpdates"
-            }
+            "icon": "./lescovex.png"
         },
         "win": {
             "icon": "./lescovex.ico",
@@ -131,14 +124,7 @@
         },
         "linux": {
             "target": "AppImage",
-            "icon": "./lescovex.png",
-            "publish": {
-                "provider": "github",
-                "owner": "mirpuicor",
-                "releaseType": "draft",
-                "publishAutoUpdate": "true",
-                "repo": "TestingAutoUpdates"
-            }
+            "icon": "./lescovex.png"
         },
         "nsis": {
             "oneClick": false,
