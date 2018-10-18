@@ -114,7 +114,7 @@ autoUpdater.on('update-available', (ev, info) => {
     sendStatusToWindow('Update available.');
 });
 autoUpdater.on('update-not-available', (ev, info) => {
-    sendStatusToWindow('Update not available.');
+
 });
 autoUpdater.on('error', (ev, err) => {
     sendStatusToWindow('Error in auto-updater.:' + err);
