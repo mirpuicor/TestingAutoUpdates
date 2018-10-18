@@ -1,6 +1,6 @@
 {
     "name": "lescovex",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "description": "Lescovex media explorer and wallet",
     "main": "main.js",
     "author": "Lescovex",
@@ -18,7 +18,8 @@
         "electron": "npm run build && electron .",
         "postinstall": "electron-builder install-app-deps",
         "dist": "electron-builder --publish always",
-        "release": "build"
+        "release": "build",
+        "publish": "build --win -p always"
     },
     "publish": {
         "provider": "github"
@@ -116,10 +117,10 @@
             "target": "nsis",
             "publish": {
                 "provider": "github",
-                "vPrefixedTagName": "true",
                 "owner": "mirpuicor",
                 "releaseType": "draft",
-                "publishAutoUpdate": "true"
+                "publishAutoUpdate": "true",
+                "repo": "TestingAutoUpdates"
             }
         },
         "linux": {

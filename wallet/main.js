@@ -104,12 +104,7 @@ function sendStatusToWindow(text) {
 }
 
 autoUpdater.allowDowngrade = true;
-autoUpdater.setFeedURL({
-    "provider": "github",
-    "owner": "mirpuicor",
-    "repo": "TestingAutoUpdates",
-    "releaseType": "draft"
-});
+
 autoUpdater.on('checking-for-update', () => {
     sendStatusToWindow('Checking for update...');
 });
