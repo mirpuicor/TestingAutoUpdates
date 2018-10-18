@@ -114,13 +114,7 @@
         "win": {
             "icon": "./lescovex.ico",
             "target": "nsis",
-            "publish": {
-                "provider": "github",
-                "owner": "mirpuicor",
-                "releaseType": "draft",
-                "publishAutoUpdate": "true",
-                "repo": "TestingAutoUpdates"
-            }
+
         },
         "linux": {
             "target": "AppImage",
@@ -132,6 +126,13 @@
             "allowElevation": true,
             "allowToChangeInstallationDirectory": true,
             "runAfterFinish": true
+        },
+        "publish": {
+            "provider": "github",
+            "owner": "mirpuicor",
+            "releaseType": "draft",
+            "publishAutoUpdate": "true",
+            "repo": "TestingAutoUpdates"
         },
         "files": [
             "build",
